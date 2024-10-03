@@ -5,14 +5,16 @@ import './App.css'
 import Header from './components/Header/Header'
 import LoveProduct from './components/LoveProduct/LoveProduct'
 import ContentProduct from './components/ContentProduct/ContentProduct'
+import Modal from './components/Modal/Modal'
 
 function App() {
 
   return (
     <div className='container'>
-      <Header />
+      {/* <Header />
       <LoveProduct />
-      <ContentProduct />
+      <ContentProduct /> */}
+      <Modal />
     </div>
   )
 }
