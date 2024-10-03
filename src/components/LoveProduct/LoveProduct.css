@@ -1,0 +1,11 @@
+.select-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input:focus-visible{
+    outline: none;
+}

@@ -1,0 +1,7 @@
+.list-content{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: s; */
+    margin-top: 20px;
+    gap: 20px;
+}
