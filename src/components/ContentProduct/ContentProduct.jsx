@@ -3,13 +3,14 @@ import ProductItem from "../ProductItem/ProductItem";
 import "./ContentProduct.css";
 import { BiPlus } from "react-icons/bi";
 import { dataProducts } from "../../MockData";
+import PaginationComp from "../Pagination";
 
 
 const ContentProduct = () => {
 
   return (
     <>
-      <div>
+      <div className="">
         <div
           style={{
             display: "flex",
@@ -38,6 +39,7 @@ const ContentProduct = () => {
             return <ProductItem key={index} product={product} />;
           })}
         </div>
+        <PaginationComp />
       </div>
       
     </>

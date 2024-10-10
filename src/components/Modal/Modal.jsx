@@ -1,6 +1,5 @@
 import { Button, Modal } from "antd";
 import { FaStar } from "react-icons/fa";
-import { background } from "storybook/internal/theming";
 
 // eslint-disable-next-line react/prop-types
 const ModalComp = ({ isModalOpen, handleCancel, dataDetail }) => {

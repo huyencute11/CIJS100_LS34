@@ -1,11 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Header from './components/Header/Header'
 import LoveProduct from './components/LoveProduct/LoveProduct'
 import ContentProduct from './components/ContentProduct/ContentProduct'
-import Modal from './components/Modal/Modal'
+
 
 function App() {
 
@@ -14,6 +12,7 @@ function App() {
       <Header />
       <LoveProduct />
       <ContentProduct />
+     
       {/* <Modal /> */}
     </div>
   )
