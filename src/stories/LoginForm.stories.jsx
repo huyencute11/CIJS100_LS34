@@ -1,10 +1,9 @@
-
-import { expect, userEvent, within } from '@storybook/test';
-import LoginForm from './LoginForm';
+import { expect, userEvent, within } from "@storybook/test";
+import LoginForm from "./LoginForm";
 
 export default {
-    title: 'LoginForm',
-    component: LoginForm,
+  title: "LoginForm",
+  component: LoginForm,
 };
 
 // export const Default = () => <LoginForm />;
@@ -19,18 +18,18 @@ export const FilledForm = {
     const canvas = within(canvasElement);
 
     // 👇 Simulate interactions with the component
-    await userEvent.type(canvas.getByTestId('email'), 'email@provider.com');
+    await userEvent.type(canvas.getByTestId("email"), "email@provider.com");
 
-    await userEvent.type(canvas.getByTestId('password'), 'a-random-password');
+    await userEvent.type(canvas.getByTestId("password"), "a-random-password");
 
     // See https://storybook.js.org/docs/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
-    await userEvent.click(canvas.getByRole('button'));
+    await userEvent.click(canvas.getByRole("button"));
 
     // 👇 Assert DOM structure
-    // await expect(
-    //   canvas.getByText(
-    //     'Everything is perfect. Your account is ready and we should probably get you started!',
-    //   ),
-    // ).toBeInTheDocument();
+    await expect(
+      canvas.getByText(
+        "Everything is perfect. Your account is ready and we should probably get you started!"
+      )
+    ).toBeInTheDocument();
   },
 };
