@@ -12,6 +12,7 @@ const ProductItem = (props) => {
         console.log('show modal detail')
         setIsShowDetail(true)
     }
+
     const handleCloseModalDetail = ()=>{
         setIsShowDetail(false)
     }
@@ -49,6 +50,7 @@ const ProductItem = (props) => {
                 <span>{product.discount}</span>
             </div>
         </div>
+        {/* truyen props */}
         <ModalComp isModalOpen={isShowDetail} handleCancel={handleCloseModalDetail} dataDetail={product}/>
         </>
     )

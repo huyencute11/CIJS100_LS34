@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 
 // eslint-disable-next-line react/prop-types
 const ModalComp = ({ isModalOpen, handleCancel, dataDetail }) => {
+  
   const CreateStar = () => {
     const star = [];
     for (let i = 0; i < 5; i++) {
@@ -68,7 +69,7 @@ const ModalComp = ({ isModalOpen, handleCancel, dataDetail }) => {
                     type="default"
                     background="#fff"
                     className={`${
-                      dataDetail.category === item ? "bg-[#cdcdcd]" : ""
+                      dataDetail.category === item ? "bg-[#cdcdcd]" : "bg-[red]"
                     }`}
                   >
                     {item}
