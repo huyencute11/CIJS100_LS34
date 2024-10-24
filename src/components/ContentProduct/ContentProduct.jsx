@@ -63,7 +63,7 @@ const ContentProduct = () => {
         </div>
 
         <div className="list-content">
-          {dataProducts?.map((product, index) => {
+          {dataProducts?.sort((a, b) => a.price - b.price).map((product, index) => {
             return <ProductItem key={index} product={product} />;
           })}
         </div>

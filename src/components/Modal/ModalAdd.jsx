@@ -11,8 +11,11 @@ const ModalAdd = ({ onCloseModal, handleAddProduct }) => {
         category: '',
         status: '',
         type: '',
-        desc: ''
+        desc: '',
+        notes: []
     })
+    //
+   
     const handleChangeInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -20,6 +23,7 @@ const ModalAdd = ({ onCloseModal, handleAddProduct }) => {
         infoProduct[name] = value;
         setInfoProduct({
             //spread operator
+            date: new Date(),
             ...infoProduct
         });
     }

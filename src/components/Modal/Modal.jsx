@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 
 // eslint-disable-next-line react/prop-types
 const ModalComp = ({ isModalOpen, handleCancel, dataDetail }) => {
-  
+
   const CreateStar = () => {
     const star = [];
     for (let i = 0; i < 5; i++) {
@@ -13,7 +13,7 @@ const ModalComp = ({ isModalOpen, handleCancel, dataDetail }) => {
     return star;
   };
   let listCategory = ["Nhỏ", "Vừa", "Lớn"];
-
+  // add notes to dataDetail
   return (
     <>
       <Modal
@@ -36,8 +36,12 @@ const ModalComp = ({ isModalOpen, handleCancel, dataDetail }) => {
               style={{ width: "300px", height: "300px" }}
             />
           </div>
+
           <div>
             <p>Hạt thập cẩm, hũ trang trí</p>
+            {/* <div> */}
+            {dataDetail?.date && <p>Ngày thêm: {dataDetail?.date}</p>}
+            {/* </div> */}
             <span className="relative">
               <p>Giá: {dataDetail.price}</p>
               <p className="absolute">{dataDetail.discount}</p>
@@ -68,14 +72,22 @@ const ModalComp = ({ isModalOpen, handleCancel, dataDetail }) => {
                     key={index}
                     type="default"
                     background="#fff"
-                    className={`${
-                      dataDetail.category === item ? "bg-[#cdcdcd]" : "bg-[red]"
-                    }`}
+                    className={`${dataDetail.category === item ? "bg-[#cdcdcd]" : "bg-[red]"
+                      }`}
                   >
                     {item}
                   </Button>
                 );
               })}
+            </div>
+            {/* List notes */}
+            <div>
+              <button>Thêm ghi chú</button>
+              <p>Ghi chú</p>
+              {/* nếu notes rỗng thì hiện ra 1 cái nut add note */}
+              {/* {dataDetail?.notes?.map((note, index) => {
+                <textarea rows={4} cols={4} key={1}>textttt</textarea>;
+              })} */}
             </div>
           </div>
         </div>
